@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>productlist</title>
+  <link rel="stylesheet" href="./css/productlist.css">
+  <script src="./lib/flexible/flexible.js"></script>
+  
+</head>
+<body>
+   <div class="mm_container">
+     <!-- 头部 -->
+    <div class="mm_header">
+      <div class="logo fl">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- 搜索 -->
+    <div class="mm_search">
+      <div class="search_input fl">
+        <input type="text" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="search_button fr">
+        <button>搜索</button>
+      </div>
+    </div>
+
+    <!-- 产品列表主体 -->
+    <div class="mm_productlist">
+
+      <div class="title">
+        
+      </div>
+
+      <div class="product">
+        
+      </div>
+      
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="mm_footer">
+      <div class="ft_nav">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="ft_footer">
+        <p class="p1">
+          <a href="javascript:;" class="a1">手机APP下载</a>
+          <a href="javascript:;" class="a2">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+   </div>
+
+
+   <!-- 分类标题模板 -->
+   <script type="text/html" id="titleTemp">
+    <div class="search fl">
+      <a href="index.html">首页 ></a>
+      <a href="category.html">全部分类 ></a>
+      <a href="javascript:;">{{result[0].category}}</a>
+    </div>
+    <div class="but fr">
+      <button>筛选</button>
+    </div>
+   </script>
+
+   <!-- 商品列表模板 -->
+   <script type="text/html" id="prolistTemp">
+      {{if result.length == 0}}
+        <p>该分类下没有数据</p>
+      {{else}}
+      <div class="product_list">
+        <ul>
+          {{each result v i}}
+          <li>
+            <a href="productInfo.html?productId={{v.productId}}">
+              <div class="img_box fl">
+                {{#v.productImg}}
+              </div>
+              <div class="info_box">
+                <div class="info_title">{{v.productName}}</div>
+                <div class="price">{{v.productPrice}}</div>
+                <div class="commit">
+                  <span>{{v.productQuote}}</span>
+                  <span>{{v.productCom}}</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    
+      <div class="product_footer">
+        <button class="fl up">上一页</button>
+        <button class="fr down">下一页</button>
+        <div class="input_box fl">
+          <select>
+            <%
+              for(var i = 1; i <= maxPage; i++){
+            %>
+              <option value="<%= i %>"><%=i %>/<%=maxPage %></option> 
+            <%
+              }
+            %>
+          </select>
+        </div>
+        </div>
+        {{/if}}
+    
+   </script>
+
+   
+
+   <script src="./lib/jquery/jquery.min.js"></script>
+   <script src="./lib/artTemplate/template-web.js"></script>
+   <script src="./js/common.js"></script>
+   <script src="./js/productlist.js"></script>
+</body>
+</html>

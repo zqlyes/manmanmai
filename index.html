@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+  <div class="mm_container">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <div class="logo fl">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- 搜索 -->
+    <div class="mm_search">
+      <div class="search_input fl">
+        <input type="text" placeholder="请输入你想比价的商品">
+      </div>
+      <div class="search_button fr">
+        <button>搜索</button>
+      </div>
+    </div>
+    <!-- 导航 -->
+    <div class="mm_nav">
+      <ul class="clearfix">
+
+      </ul>
+    </div>
+    <div class="mm_goods">
+      <div class="title">
+        <div class="fl">
+          <p>超值折扣推荐</p>
+        </div>
+        <div class="fr">
+          <a href="javascript:;">
+            <img src="./images/more.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="goods_list">
+        <ul>
+
+        </ul>
+      </div>
+    </div>
+    <div class="mm_more">
+      <a href="moneyctrl.html">
+        <button>更多优惠信息</button>
+      </a>
+    </div>
+    <!-- 底部 -->
+    <div class="mm_footer">
+      <div class="ft_title">
+        <div class="fl">品牌排行</div>
+        <div class="fr">
+          <img src="./images/more.png" alt="">
+        </div>
+      </div>
+      <div class="ft_nav">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#">
+          <img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="ft_footer">
+        <p class="p1">
+          <a href="javascript:;" class="a1">手机APP下载</a>
+          <a href="javascript:;" class="a2">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/html" id="navTemp">
+    {{each result v i}}
+      <li>
+        <a href="{{v.titlehref}}">
+          {{#v.img}}
+          <p>{{v.name}}</p>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+  <script type="text/html" id="goodsTemp">
+    {{each result v i}}
+      <li>
+        <a href="javascript:;">
+          <div class="fl goods_img">
+            {{#v.productImgSm}}
+          </div>
+          <div class="goods_info">
+            <div class="info_title">
+              {{v.productName}}   
+              <span class="font-color">{{v.productPinkage}}</span>       
+            </div>
+            <div class="other">
+              <p class="mall fl">
+                <span>{{v.productFrom}}</span> 
+                | 
+                <span>{{v.productTime}}</span> 
+              </p>
+              <span class="commit fr">
+                <i class="fa fa-commenting-o"></i>
+                <i>{{v.comment}}</i>
+                
+              </span>
+            </div>
+          </div>
+        </a>      
+      </li>
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

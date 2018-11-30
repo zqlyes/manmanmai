@@ -1,0 +1,187 @@
+@import "base";
+
+
+// 头部
+.mm_header{
+  width: 100%;
+  height: 99rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid #FF7502;
+  text-align: center;
+  // line-height: 99rem/@base;
+  
+  .icon{
+    width: 120rem/@base;
+    height: 99rem/@base;
+    
+    a{
+      display: block;
+      color: #fff;
+
+      i{
+        line-height: 99rem/@base;
+        font-size: 80rem/@base;
+      }
+    }
+  }
+   
+
+  .appdown{
+    margin: 13rem/@base 14rem/@base 0 0;
+
+    img{
+      width: 68rem/@base;
+      height: 68rem/@base;
+    }
+  }
+
+  p{
+    line-height: 99rem/@base;
+    color: #fff;
+    font-size: 40rem/@base;
+  }
+}
+
+
+// 底部
+.mm_footer{
+  margin-top: 20rem/@base;
+
+  .ft_nav{
+    width: 100%;
+    height: 68rem/@base;
+    margin-top: 52rem/@base;
+    border-top: 2rem/@base solid #C2C2C2;
+    border-bottom: 2rem/@base solid #C2C2C2;
+    font-size: 28rem/@base;
+
+    a{
+      float: left;
+      display: block;
+      line-height: 66rem/@base;
+      padding:0 80rem/@base;
+      color: #000;
+
+      &:nth-child(2){
+        border-left: 2rem/@base solid #C2C2C2;
+        border-right: 2rem/@base solid #C2C2C2; 
+      }
+
+      img{
+        width: 30rem/@base;
+        height: 30rem/@base;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -4rem/@base;
+        right: 5rem/@base;
+
+      }
+    }
+  }
+
+  .ft_footer{
+    margin-top: 27rem/@base;
+    color: #6B6868;
+    text-align: center;
+    font-size: 22rem/@base;
+
+    .p1{
+
+      .a1{
+        color: #FE0D0E;
+      }
+
+      .a2{
+        color: #000;
+      }
+    }  
+  }
+}
+
+//主体
+.moneyctrl_content{
+  
+  .goods_list{
+
+    li{
+      width: 100%;
+      height: 258rem/@base;
+      background-color: #fff;
+      position: relative;
+      padding: 14rem/@base 8rem/@base; 
+      overflow: hidden;
+
+      a{
+        display: block;   
+      }
+
+      .goods_img{
+        width: 180rem/@base;
+        height: 258rem/@base;
+
+        img{
+          width: 180rem/@base;
+          height: 180rem/@base;
+          margin: 15rem/@base auto 0;
+        }
+      }
+
+      .goods_info{
+        overflow: hidden;
+        padding-top: 20rem/@base; 
+        padding-left: 10rem/@base;     
+
+        .info_title{
+          font-size: 28rem/@base;
+          color: #000;
+
+          .font-color{
+            color: @mainColor;
+          }
+        }
+
+        .other{
+          width: 520rem/@base;
+          margin-top: 56rem/@base;
+          font-size: 22rem/@base;
+          color: #A1A1A1;
+          position: absolute;
+          bottom: 60rem/@base;
+
+        }
+
+      }
+    }
+  }
+
+  .goods_cate{
+    height: 130rem/@base;
+    width: 100%;
+    background-color:#fff;
+    padding: 0 42rem/@base;
+
+
+    button{
+      width: 162rem/@base;
+      height: 70rem/@base;
+      background-image: url('../images/proft_btn_bg_03.png');
+      background-size: 100% 100%;
+      font-size: 26rem/@base;
+      border-radius: 5rem/@base; 
+    }
+
+    .input_box{
+      margin-left: 95rem/@base;
+
+      select{
+        width: 154rem/@base;
+        height: 70rem/@base;
+        border: 2rem/@base solid #B2B2B2;
+        font-size: 28rem/@base;
+        padding: 0 20rem/@base;        
+      }
+    }
+  }
+  
+}

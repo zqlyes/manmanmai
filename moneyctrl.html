@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>moneyctrl</title>
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+<body>
+  <div class="mm_moneyctrl">
+    <!-- 头部 -->
+    <div class="mm_header">
+      <div class="fl icon">
+        <a href="index.html">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </div>
+      <div class="appdown fr">
+        <a href="javascript:;">
+          <img src="./images/header_app.png" alt="">
+        </a>
+      </div>
+      <p>省钱控 - 最新优惠</p>
+    </div>
+    
+
+    <!-- 主体 -->
+    <div class="moneyctrl_content">
+      
+    </div>
+
+
+    <!-- 底部 -->
+    <div class="mm_footer">
+      <div class="ft_nav">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#"><img src="./images/top.jpg" alt="">返回顶部</a>
+      </div>
+      <div class="ft_footer">
+        <p class="p1">
+          <a href="javascript:;" class="a1">手机APP下载</a>
+          <a href="javascript:;" class="a2">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 商品列表渲染 -->
+  <script type="text/html" id="proTemp">
+    <div class="goods_list">
+      <ul> 
+        {{each result v i}}
+          <li>
+            <a href="moneyproduct.html?productid={{v.productId}}">
+              <div class="fl goods_img">
+                {{#v.productImgSm}}
+              </div>
+              <div class="goods_info">
+                <div class="info_title">
+                  {{v.productName}}   
+                  <span class="font-color">{{v.productPinkage}}</span>       
+                </div>
+                <div class="other">
+                  <p class="mall fl">
+                    <span>{{v.productFrom}}</span> 
+                    | 
+                    <span>{{v.productTime}}</span> 
+                  </p>
+                  <span class="commit fr">
+                    <i class="fa fa-commenting-o"></i>
+                    <i>{{v.comment}}</i>
+                  </span>
+                </div>
+              </div>
+            </a>      
+          </li>
+        {{/each}}
+     </ul>
+    </div>
+    <div class="goods_cate">
+      <button class="fl up">上一页</button>
+      <div class="input_box fl">
+        <select>
+          <%
+            for(var i = 1; i <= maxPage; i++){
+          %>
+            <option value="<%= i %>"><%=i %>/<%=maxPage %></option> 
+          <%
+            }
+          %>
+        </select>
+      </div>
+      <button class="fr down">下一页</button>
+    </div>
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/moneyctrl.js"></script>
+</body>
+</html>

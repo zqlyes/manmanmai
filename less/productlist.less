@@ -1,0 +1,236 @@
+@import "base";
+
+// 头部
+.mm_header{
+  width: 100%;
+  height: 99rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1rem/@base solid #FF7502;
+
+  .logo{
+    margin: 23rem/@base 0 0 34rem/@base;
+
+    img{
+      width: 371rem/@base;
+      height: 50rem/@base;
+    }
+  }
+
+  .appdown{
+    margin: 13rem/@base 14rem/@base 0 0;
+
+    img{
+      width: 68rem/@base;
+      height: 68rem/@base;
+    }
+  }
+}
+
+// 搜索区域
+.mm_search{
+  width: 100%;
+  height: 104rem/@base;
+  background-color: #fff;
+
+  .search_input{
+    padding: 22rem/@base 0 0 22rem/@base;
+
+    input{
+      width: 566rem/@base;
+      height: 60rem/@base;
+      background-color: #F1F1F1;
+      border-radius: 30rem/@base;
+      padding-left: 40rem/@base;
+      font-size: 28rem/@base;
+    }
+  }
+
+  .search_button{
+    padding: 22rem/@base 20rem/@base 0 0;
+    text-align: center;
+    line-height: 60rem/@base;
+
+    button{
+      width: 128rem/@base;
+      height: 60rem/@base;
+      background-color: @mainColor;
+      border: 1rem/@base solid #FF7203;
+      border-radius: 30rem/@base;
+      font-size: 28rem/@base;
+      color: #fff;
+    }
+  }
+}
+
+// 底部
+.mm_footer{
+  margin-top: 20rem/@base;
+
+  .ft_nav{
+    width: 100%;
+    height: 68rem/@base;
+    margin-top: 52rem/@base;
+    border-top: 2rem/@base solid #C2C2C2;
+    border-bottom: 2rem/@base solid #C2C2C2;
+    font-size: 28rem/@base;
+
+    a{
+      float: left;
+      display: block;
+      line-height: 66rem/@base;
+      padding:0 80rem/@base;
+      color: #000;
+
+      &:nth-child(2){
+        border-left: 2rem/@base solid #C2C2C2;
+        border-right: 2rem/@base solid #C2C2C2; 
+      }
+
+      img{
+        width: 30rem/@base;
+        height: 30rem/@base;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -4rem/@base;
+        right: 5rem/@base;
+
+      }
+    }
+  }
+
+  .ft_footer{
+    margin-top: 27rem/@base;
+    color: #6B6868;
+    text-align: center;
+    font-size: 22rem/@base;
+
+    .p1{
+
+      .a1{
+        color: #FE0D0E;
+      }
+
+      .a2{
+        color: #000;
+      }
+    }  
+  }
+}
+
+
+// 主体
+.mm_productlist{
+
+  .title{
+    height: 78rem/@base;
+    background-image: url('../images/nav_bg_03.png');
+    background-size: 100% 100%;
+    border-bottom: 2rem/@base solid #C9C9C9;
+    border-top: 2rem/@base solid #C9C9C9;
+    
+    .search{
+      padding-left: 18rem/@base;
+    }
+    a{
+      font-size: 25rem/@base;
+      line-height: 74rem/@base;
+      color: #000;
+    }
+
+    .but{
+      margin: 8rem/@base 16rem/@base 0 0;
+
+      button{
+        width: 125rem/@base;
+        height: 58rem/@base;
+        border: 2rem/@base solid #9E9E9E;
+        background-image: url('../images/list_btn_bg_03.png');
+        background-size: 100% 100%;
+        border-radius: 8rem/@base;
+        font-size: 25rem/@base;
+      }
+    }
+  }
+
+
+  .product_list{
+
+    li{
+      height: 236rem/@base;
+      width: 100%;
+      background-color: #fff;
+      border-bottom: 2rem/@base solid #E6E6E6;
+      padding: 20rem/@base;
+
+      .img_box{
+        width: 200rem/@base;
+        height: 180rem/@base;
+
+        img{
+          width: 100%;
+          height: 100%;        
+        }
+      }
+
+      .info_box{
+         overflow: hidden;
+         padding-left: 20rem/@base;
+         font-size: 26rem/@base;         
+
+         .info_title{
+           color: #000;
+           line-height: 42rem/@base;
+         }
+
+         .price{
+           line-height: 60rem/@base;
+           color: #E82A1C;
+         }
+
+         .commit{
+           font-size: 20rem/@base;
+         }
+      }
+    }
+    
+    
+
+  }
+
+
+  .product_footer{
+    height: 92rem/@base;
+    width: 100%;
+    background-color: #fff;
+    padding: 20rem/@base 42rem/@base 0;
+
+    button{
+      width: 162rem/@base;
+      height: 70rem/@base;
+      background-image: url('../images/proft_btn_bg_03.png');
+      background-size: 100% 100%;
+      font-size: 26rem/@base;
+      border-radius: 5rem/@base; 
+    }
+
+    .input_box{
+      margin-left: 95rem/@base;
+
+      select{
+        width: 154rem/@base;
+        height: 70rem/@base;
+        border: 2rem/@base solid #B2B2B2;
+        font-size: 28rem/@base;
+        padding: 0 35rem/@base;        
+      }
+    }
+  }
+
+  p{
+    font-size: 32rem/@base;
+    padding: 20rem/@base;
+  }
+}
+
+

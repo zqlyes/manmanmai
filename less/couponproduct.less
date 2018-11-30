@@ -1,0 +1,180 @@
+@import 'base';
+
+// 头部
+.mm_header{
+  width: 100%;
+  height: 99rem/@base;
+  background-color: #F4483E;
+  border-bottom: 1rem/@base solid #F4483E;
+  text-align: center;
+  // line-height: 99rem/@base;
+  
+  .icon{
+    width: 120rem/@base;
+    height: 99rem/@base;
+    
+    a{
+      display: block;
+      color: #fff;
+
+      i{
+        line-height: 99rem/@base;
+        font-size: 80rem/@base;
+      }
+    }
+  }
+   
+
+  .appdown{
+    margin: 13rem/@base 14rem/@base 0 0;
+
+    img{
+      width: 68rem/@base;
+      height: 68rem/@base;
+    }
+  }
+
+  p{
+    line-height: 99rem/@base;
+    color: #fff;
+    font-size: 40rem/@base;
+  }
+}
+
+
+// 底部
+.mm_footer{
+  margin-top: 20rem/@base;
+
+  .ft_nav{
+    width: 100%;
+    height: 68rem/@base;
+    margin-top: 52rem/@base;
+    border-top: 2rem/@base solid #C2C2C2;
+    border-bottom: 2rem/@base solid #C2C2C2;
+    font-size: 28rem/@base;
+
+    a{
+      float: left;
+      display: block;
+      line-height: 66rem/@base;
+      padding:0 80rem/@base;
+      color: #000;
+
+      &:nth-child(2){
+        border-left: 2rem/@base solid #C2C2C2;
+        border-right: 2rem/@base solid #C2C2C2; 
+      }
+
+      img{
+        width: 30rem/@base;
+        height: 30rem/@base;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -4rem/@base;
+        right: 5rem/@base;
+
+      }
+    }
+  }
+
+  .ft_footer{
+    margin-top: 27rem/@base;
+    color: #6B6868;
+    text-align: center;
+    font-size: 22rem/@base;
+
+    .p1{
+
+      .a1{
+        color: #FE0D0E;
+      }
+
+      .a2{
+        color: #000;
+      }
+    }  
+  }
+}
+
+//蒙版
+.mengban{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  position: absolute;
+  z-index: 99;
+  overflow: hidden;
+
+  img{
+    width: 400rem/@base;
+    height: 320rem/@base;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+// 主体
+.main{
+   background-color: #fff;
+
+  p{
+    font-size: 26rem/@base;
+    padding: 18rem/@base 0;
+    color: #918D93;
+    text-align: center;
+  }
+
+  ul{
+
+    li{
+      min-height: 200rem/@base;
+      border-bottom: 2rem/@base solid #E7E7E7;
+      padding: 20rem/@base;
+      position: relative;
+      
+      i{
+        position: absolute;
+        top: 50%;
+        right: 10rem/@base;
+        transform: translateY(-50%);
+        color: #ccc;
+      }
+
+      .img_box{
+        width: 200rem/@base;
+        height: 160rem/@base;
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .pro_info{
+        overflow: hidden;
+        padding-left: 20rem/@base;
+        font-size: 24rem/@base;
+        color: #000;   
+
+        .title{
+          font-size: 26rem/@base;
+        }
+
+        .price{
+          font-weight: bold;
+          padding: 10rem/@base 0;          
+        }
+
+        .time{
+          color: #EF8224;
+          margin-top: 20rem/@base;
+        }
+      }
+    }
+  }
+  
+}

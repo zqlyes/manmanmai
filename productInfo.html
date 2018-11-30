@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>productInfo</title>
+  <link rel="stylesheet" href="./css/productInfo.css">
+  <script src="./lib/flexible/flexible.js"></script>
+
+</head>
+<body>
+  
+    <div class="mm_container">
+      <!-- 头部 -->
+      <div class="mm_header">
+        <div class="logo fl">
+          <a href="index.html">
+            <img src="./images/header_logo.png" alt="">
+          </a>
+        </div>
+        <div class="appdown fr">
+          <a href="javascript:;">
+            <img src="./images/header_app.png" alt="">
+          </a>
+        </div>
+      </div>
+
+      <!-- 搜索 -->
+      <div class="mm_search">
+        <div class="search_input fl">
+          <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_button fr">
+          <button>搜索</button>
+        </div>
+      </div>
+
+      <!-- 产品列表主体 -->
+      <div class="mm_productInfo">
+        <div class="product">
+          
+        </div>
+        
+        <div class="info">
+          <div class="info_title">网友评价</div>
+          <div class="info_content">
+            <ul>
+              
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <button>查看更多评价</button>
+        </div>
+        
+      </div>
+
+
+      <!-- 底部 -->
+      <div class="mm_footer">
+        <div class="ft_nav">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="#"><img src="./images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="ft_footer">
+          <p class="p1">
+            <a href="javascript:;" class="a1">手机APP下载</a>
+            <a href="javascript:;" class="a2">慢慢买手机版</a>
+            -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品详情模板 -->
+    <script type="text/html" id="proTemp">
+        <div class="title">
+          <div class="search fl">
+            <a href="index.html">首页 ></a>
+            <a href="productlist.html?categoryid={{result[0].categoryId}}">{{categoryName}} ></a>
+            <a href="javascript:;">{{result[0].productName.split(' ')[0]}} ></a>
+          </div>
+          <div class="but fr">
+            <button>筛选</button>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="banner_title">{{result[0].productName}}</div>
+          <div class="img_box">
+            {{#result[0].productImg}}
+          </div>
+          <div class="icon">收藏</div>
+        </div>
+        <div class="tab">
+          <a href="#">比价购买</a>
+          <a href="#">产品参数</a>
+          <a href="#">评价({{num}})</a>
+        </div>
+        <div class="plist">
+          <div class="top">
+            {{#result[0].bjShop}}
+          </div>
+          <div class="bottom">
+              * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+          </div>
+        </div>
+      
+    </script>
+
+    <!-- 用户评论模板 -->
+   <script type="text/html" id="comTemp">
+     {{each result v i}}
+      <li>
+        <div class="p1 clearfix">
+          <div class="fl">{{v.comName}}</div>
+          <div class="fr">{{v.comTime}}</div>
+        </div>
+        <div class="p2 clearfix">
+          <div class="fr">{{v.comFrom}}</div>
+        </div>
+        <div class="content">{{v.comContent}}</div>
+      </li>
+     {{/each}}
+   </script>
+
+  
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/productInfo.js"></script>
+</body>
+</html>
+
