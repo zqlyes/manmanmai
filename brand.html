@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>brand</title>
+  <link rel="stylesheet" href="./css/brand.css">
+  <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
+  <script src="./lib/flexible/flexible.js"></script>
+</head>
+<body>
+
+  <div class="mm_brand">
+     <!-- 头部 -->
+     <div class="mm_header">
+        <div class="logo fl">
+          <a href="index.html">
+            <img src="./images/header_logo.png" alt="">
+          </a>
+        </div>
+        <div class="appdown fr">
+          <a href="javascript: history();">
+            <img src="./images/header_app.png" alt="">
+          </a>
+        </div>
+      </div>
+  
+      <!-- 搜索 -->
+      <div class="mm_search">
+        <div class="search_input fl">
+          <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="search_button fr">
+          <button>搜索</button>
+        </div>
+      </div>
+  
+      <!-- 主体 -->
+      <div class="main">
+
+        <!-- 导航 -->
+        <div class="nav">
+          <a href="index.html">首页 ></a>
+          <a href="brandTitle.html">全部分类 ></a>
+        </div>
+
+        <!-- 品牌排行 -->
+        <div class="rank">
+          <div class="title">平板电视哪个好</div>
+          <ul>
+            
+          </ul>
+        </div>
+
+        <!-- 产品销量排行 -->
+        <div class="sale">
+          <div class="title">平板电视产品销量排行</div>
+          <div class="product">
+            <ul></ul>
+          </div>          
+        </div>
+
+        <!-- 评论区 -->
+        <div class="comment">
+          <div class="title">平板电视最新评论</div>   
+          <div class="com">
+            
+          </div>       
+        </div>
+      </div>
+
+      <!-- 底部 -->
+      <div class="mm_footer">
+        <div class="ft_nav">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          <a href="#">
+            <img src="./images/top.jpg" alt="">返回顶部</a>
+        </div>
+        <div class="ft_footer">
+          <p class="p1">
+            <a href="javascript:;" class="a1">手机APP下载</a>
+            <a href="javascript:;" class="a2">慢慢买手机版</a>
+            -- 掌上比价平台
+          </p>
+          <p>m.manmanbuy.com</p>
+        </div>
+      </div>
+  </div>
+  
+  <!-- 品牌排行模板 -->
+  <script type="text/html" id="brandrankTemp">
+    {{each result v i}}
+      <li>
+        <i class="fa fa-angle-right"></i>
+        <div class="icon">{{i + 1}}</div>
+        <p class="p1">{{v.brandName}}</p>
+        <p class="p2">{{v.brandInfo}}</p>
+      </li>
+    {{/each}}
+  </script>
+
+  <!-- 产品销量排行模板 -->
+  <script type="text/html" id="saleTemp">
+    {{each result v i}}
+      <li>
+        <a href="productInfo.html?productId={{v.productId}}" data-id="{{v.productId}}">
+          <div class="img_box fl">
+            {{#v.productImg}}
+          </div>
+          <div class="info_box">
+            <div class="star">
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-heart"></i>
+            </div>
+            <div class="info_title">{{v.productName}}</div>
+            <div class="price">{{v.productPrice}}</div>
+            <div class="commit">
+              <span>{{v.productQuote}}</span>
+              <span>{{v.productCom}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+  <!-- 评论模板 -->
+  <script type="text/html" id="comTemp">
+    {{each result v i}}
+    <div class="block">
+      <div class="pro">
+        <div class="fl img_box">
+          <img src="{{img}}" alt="">
+        </div>
+        <div class="pro_title">{{title}}</div>
+      </div>
+      <div class="detail">
+        <i class="tap"></i>
+        <div class="info clearfix">
+          <div class="user fl">{{v.comName}}：</div>
+          <div class="star fl">
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-heart"></i>
+          </div>
+          <div class="time fr">{{v.comTime}}</div>
+        </div>  
+        <p>{{v.comContent}}</p>
+        <p class="bottom">{{v.comFrom}}</p>
+      </div>
+    </div>  
+    {{/each}}
+  </script>
+  
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/brand.js"></script>
+</body>
+</html>

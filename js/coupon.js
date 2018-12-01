@@ -9,6 +9,11 @@ $(function(){
 
       var htmlstr = template('couponTemp',info);
       $('.main ul').html(htmlstr);
+
+      $('.main').on('click','a',function(){      
+        localStorage.setItem('coupon',$(this).find('p').text());
+      })
+
     }
   })
 })

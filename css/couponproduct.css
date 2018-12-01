@@ -206,17 +206,46 @@ i {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  position: fixed;
   z-index: 99;
   overflow: hidden;
+  display: none;
 }
-.mengban img {
-  width: 5.33333333rem;
-  height: 4.26666667rem;
+.mengban .del i {
+  position: absolute;
+  right: 0.13333333rem;
+  top: 0.13333333rem;
+  color: #fff;
+}
+.mengban .img_box {
+  width: 4.53333333rem;
+  height: 3.46666667rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.mengban .img_box img {
+  width: 100%;
+  height: 100%;
+}
+.mengban .arror .left,
+.mengban .arror .right {
+  width: 0.66666667rem;
+  height: 1.06666667rem;
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  line-height: 1.06666667rem;
+  text-align: center;
+}
+.mengban .arror .right {
+  left: auto;
+  right: 2rem;
 }
 .main {
   background-color: #fff;

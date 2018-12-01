@@ -133,19 +133,13 @@ i {
   height: 1.32rem;
   background-color: #FF841D;
   border-bottom: 0.01333333rem solid #FF7502;
-  text-align: center;
 }
-.mm_header .icon {
-  width: 1.6rem;
-  height: 1.32rem;
+.mm_header .logo {
+  margin: 0.30666667rem 0 0 0.45333333rem;
 }
-.mm_header .icon a {
-  display: block;
-  color: #fff;
-}
-.mm_header .icon a i {
-  line-height: 1.32rem;
-  font-size: 1.06666667rem;
+.mm_header .logo img {
+  width: 4.94666667rem;
+  height: 0.66666667rem;
 }
 .mm_header .appdown {
   margin: 0.17333333rem 0.18666667rem 0 0;
@@ -154,10 +148,35 @@ i {
   width: 0.90666667rem;
   height: 0.90666667rem;
 }
-.mm_header p {
-  line-height: 1.32rem;
+.mm_search {
+  width: 100%;
+  height: 1.38666667rem;
+  background-color: #fff;
+}
+.mm_search .search_input {
+  padding: 0.29333333rem 0 0 0.29333333rem;
+}
+.mm_search .search_input input {
+  width: 7.54666667rem;
+  height: 0.8rem;
+  background-color: #F1F1F1;
+  border-radius: 0.4rem;
+  padding-left: 0.53333333rem;
+  font-size: 0.37333333rem;
+}
+.mm_search .search_button {
+  padding: 0.29333333rem 0.26666667rem 0 0;
+  text-align: center;
+  line-height: 0.8rem;
+}
+.mm_search .search_button button {
+  width: 1.70666667rem;
+  height: 0.8rem;
+  background-color: #FF841D;
+  border: 0.01333333rem solid #FF7203;
+  border-radius: 0.4rem;
+  font-size: 0.37333333rem;
   color: #fff;
-  font-size: 0.53333333rem;
 }
 .mm_footer {
   margin-top: 0.26666667rem;
@@ -202,113 +221,46 @@ i {
 .mm_footer .ft_footer .p1 .a2 {
   color: #000;
 }
-.main .top {
-  width: 100%;
-  height: 1.04rem;
-  border-bottom: 0.02666667rem solid #DCDCDC;
-  background-color: #fff;
-  position: relative;
+.main .nav {
+  height: 1.01333333rem;
+  border-top: 0.02666667rem solid #E8E8E8;
+  border-bottom: 0.02666667rem solid #CBCBCB;
+  background-image: linear-gradient(to bottom, #fff, #EDEDED);
+  padding-left: 0.24rem;
 }
-.main .top .nav {
-  width: 8.86666667rem;
-  height: 1.04rem;
-  border-right: 0.02666667rem solid #DCDCDC;
-  padding-right: 0.53333333rem;
-}
-.main .top .nav > a {
-  width: 33.33%;
-  line-height: 1.01333333rem;
-  text-align: center;
+.main .nav a {
+  font-size: 0.37333333rem;
   color: #000;
-  font-size: 0.4rem;
-  float: left;
 }
-.main .top .nav > a i {
-  margin-left: 0.16rem;
-  font-size: 0.4rem;
+.main .rank {
+  padding: 0.26666667rem 0.13333333rem;
+  background-color: #fff;
 }
-.main .top ul {
-  width: 100%;
-  position: absolute;
-  top: 1.06666667rem;
-  z-index: 99;
-  display: none;
-}
-.main .top ul li {
+.main .rank .btn {
   width: 100%;
   height: 1.06666667rem;
-  background-color: #fff;
-  border-bottom: 0.01333333rem solid #ECECEC;
-  line-height: 1.06666667rem;
+  border: 0.02666667rem solid #CBCBCB;
+  font-size: 0.4rem;
+  color: #7C2C01;
+  background-color: #EEEEEE;
   padding-left: 0.26666667rem;
-  font-size: 0.4rem;
-}
-.main .top ul li a {
-  color: #000;
-  display: block;
-  overflow: hidden;
-}
-.main .top ul li i {
-  float: right;
-  margin: 0.26666667rem 0.13333333rem 0 0;
-  color: #FF4400;
-  display: none;
-}
-.main .top .all i {
-  display: block;
-}
-.main .top .icon {
-  width: 1.13333333rem;
-  height: 1.04rem;
-}
-.main .top .icon i {
   line-height: 1.01333333rem;
-  margin-left: 0.26666667rem;
-  font-size: 0.66666667rem;
 }
-.main .pro_info {
-  padding: 0.26666667rem 0.24rem 0;
-}
-.main .pro_info li {
-  width: 49%;
-  height: 6.06666667rem;
-  background-color: #fff;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  float: left;
-  padding: 0.2rem;
-}
-.main .pro_info li:nth-child(2n) {
-  margin-right: 0;
-}
-.main .pro_info li .img_box {
-  width: 4.26666667rem;
-  height: 4.26666667rem;
-}
-.main .pro_info li .img_box img {
+.main .rank_info {
   width: 100%;
-  height: 100%;
-}
-.main .pro_info li .title {
-  font-size: 0.34666667rem;
-  padding-bottom: 0.10666667rem;
-  color: #000;
-}
-.main .pro_info li .bottom {
-  padding-top: 0.13333333rem;
-}
-.main .pro_info li .bottom .price {
-  font-size: 0.4rem;
-  color: #F7625D;
-}
-.main .pro_info li .bottom .go {
-  width: 1.66666667rem;
-  height: 0.73333333rem;
-  background-color: #FF9501;
-  border: 0.02666667rem solid #FFA52F;
+  border: 0.02666667rem solid #CCCCCC;
   border-radius: 0.13333333rem;
-  line-height: 0.68rem;
-  text-align: center;
-  color: #fff;
-  font-size: 0.37333333rem;
+}
+.main .rank_info li {
+  height: 1.06666667rem;
+  border-bottom: 0.02666667rem solid #CCCCCC;
+  background: #EDEDED url('../images/arrow1.gif') no-repeat right center;
+}
+.main .rank_info li a {
+  display: block;
+  font-size: 0.4rem;
+  color: #000;
+  line-height: 1.04rem;
+  padding-left: 0.4rem;
+  font-weight: bold;
 }

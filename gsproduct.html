@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>gsproduct</title>
-  <link rel="stylesheet" href="./css/inlanddisount.css">
+  <link rel="stylesheet" href="./css/gsproduct.css">
   <link rel="stylesheet" href="./fonts/css/font-awesome.min.css">
   <script src="./lib/flexible/flexible.js"></script>
 </head>
@@ -26,9 +26,36 @@
       <p>凑单品</p>
     </div>
 
-
-    <div class="mian">
-      
+    
+    <!-- 主体 -->
+    <div class="main">
+      <div class="top">
+        <div class="nav fl">
+          <a href="#">京东<i class="fa fa-caret-up"></i></a>
+          <a href="#">华北<i class="fa fa-caret-up"></i></a>
+          <a href="#">全部价格<i class="fa fa-caret-up"></i></a>
+        </div>
+        <div class="icon fr"><i class="fa fa-reorder"></i></div>
+        <div class="ul_box">
+          <ul class="jd">
+            <!-- 挖个坑 -->
+          </ul>
+          <ul class="hb">
+            <!-- 挖个坑 -->
+          </ul>
+          <ul class="all">
+            <li>
+              <i class="fa fa-check"></i>                      
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pro_info">
+        <ul class="clearfix">
+          <!-- 商品坑 -->
+        </ul>
+      </div>
     </div>
 
 
@@ -49,11 +76,49 @@
       </div>
     </div>
   </div>
+
+  <!-- 商品模板 -->
+  <script type="text/html" id="gsTemp">
+    {{each result v i}}
+      <li>
+        <a href="#">
+          <div class="img_box">
+            <img src="{{v.productImg}}" alt="">
+          </div>
+          <div class="title one-txt-cut">{{v.productName}}</div>
+          <div class="bottom clearfix">
+            <div class="fl price">{{v.productPrice}}</div>
+            <div class="fr go">去凑单</div>
+          </div>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+  <!-- 京东数据模板 -->
+  <script type="text/html" id="jdTemp">
+    {{each result v i}}
+      <li>
+        <i class="fa fa-check"></i>        
+        <a href="#" data-id="{{v.shopId}}">{{v.shopName}}</a>
+      </li>
+    {{/each}}
+  </script>
+
+  <!-- 华北数据模板 -->
+  <script type="text/html" id="hbTemp">
+    {{each result v i}}
+      <li>
+        <i class="fa fa-check"></i>                
+        <a href="#" data-id="{{v.areaId}}">{{v.areaName}}</a>
+      </li>
+    {{/each}}
+  </script>
   
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template-web.js"></script>
   <script src="./lib/jquery_lazyload/jquery.lazyload.js"></script>
   <script src="./js/common.js"></script>
-  <script src="./js/inlanddiscount.js"></script>
+  <script src="./js/gsproduct.js"></script>
 </body>
 </html>

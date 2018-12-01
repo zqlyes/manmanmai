@@ -97,3 +97,144 @@
     }  
   }
 }
+
+//主体
+.main{
+
+  .top{
+    width: 100%;
+    height: 78rem/@base;
+    border-bottom: 2rem/@base solid #DCDCDC;
+    background-color: #fff;
+    position: relative;
+  
+
+    .nav{
+      width: 665rem/@base;
+      height: 78rem/@base;
+      border-right: 2rem/@base solid #DCDCDC;
+      padding-right: 40rem/@base;
+
+      >a{
+        width: 33.33%;
+        line-height: 76rem/@base;
+        text-align: center;
+        color: #000;
+        font-size: 30rem/@base;
+        float: left;
+
+        i{
+          margin-left: 12rem/@base;
+          font-size: 30rem/@base;
+        }
+      }
+    }
+
+    ul{
+      width: 100%;
+      position: absolute;
+      top: 80rem/@base;
+      z-index: 99;
+      display: none;
+     
+      li{
+        width: 100%;
+        height: 80rem/@base;
+        background-color: #fff;
+        border-bottom: 1rem/@base solid #ECECEC;
+        line-height: 80rem/@base;
+        padding-left: 20rem/@base;
+        font-size: 30rem/@base;
+
+        a{
+          color: #000;
+          display: block;
+          overflow: hidden;
+        }
+
+        i{
+          float: right;
+          margin: 20rem/@base 10rem/@base 0 0;
+          color: #FF4400;
+          display: none;
+        } 
+      }
+    }
+
+    .all {
+          
+      i{
+        display: block;
+      }
+    }
+
+    .icon{
+      width: 85rem/@base;
+      height: 78rem/@base;
+
+      i{
+        line-height: 76rem/@base;
+        margin-left: 20rem/@base;
+        font-size: 50rem/@base;
+      }
+    }
+  }
+
+  .pro_info{
+    padding: 20rem/@base 18rem/@base 0;
+
+    li{
+       width: 49%;
+       height: 455rem/@base;
+       background-color: #fff;
+       margin-right: 2%;
+       margin-bottom: 2%;
+       float: left;
+       padding: 15rem/@base;
+
+       &:nth-child(2n){
+         margin-right: 0;
+       }
+
+       .img_box{
+         width: 320rem/@base;
+         height: 320rem/@base;
+
+         img{
+           width: 100%;
+           height: 100%;
+         }
+       }
+
+       .title{
+         font-size: 26rem/@base;
+         padding-bottom: 8rem/@base;
+         color: #000;
+       }
+
+       .bottom{
+          padding-top: 10rem/@base;
+
+          .price{
+            font-size: 30rem/@base;            
+            color: #F7625D;
+          }
+
+          .go{
+            width: 125rem/@base;
+            height: 55rem/@base;
+            background-color: #FF9501;
+            border: 2rem/@base solid #FFA52F;
+            border-radius: 10rem/@base;
+            line-height: 51rem/@base;
+            text-align: center;
+            color: #fff;
+            font-size: 28rem/@base;
+          }
+       }
+    }
+  }
+
+  
+}
+
