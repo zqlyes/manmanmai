@@ -42,15 +42,7 @@ $(function(){
       success: function(info){
         console.log(info);
 
-        var obj = {};
-        info.result.forEach(function(v,i){
-          var name = v.productId;
-          var value = v.productCom.replace(/\D*/g,'');
-          obj[name] = value;
-        });
-
-        var str = JSON.stringify(obj);
-        localStorage.setItem('comment',str);
+        
 
         maxPage = Math.ceil(info.totalCount / info.pagesize);
         info.maxPage = maxPage;
@@ -59,6 +51,13 @@ $(function(){
         
         var htmlstr = template('prolistTemp',info);
         $('.product').html(htmlstr);
+        
+        // 在localStorage里存储评论数
+        $('.product').on('click','a',function(){
+          var comment = $(this).find('.commit span:last-child').text();
+          console.log(comment);
+          localStorage.setItem('comment',comment);
+        })
         
         if(maxPage == 1){
           $('.up').prop('disabled',true);               

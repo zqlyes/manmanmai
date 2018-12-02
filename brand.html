@@ -93,10 +93,13 @@
   <script type="text/html" id="brandrankTemp">
     {{each result v i}}
       <li>
-        <i class="fa fa-angle-right"></i>
-        <div class="icon">{{i + 1}}</div>
-        <p class="p1">{{v.brandName}}</p>
-        <p class="p2">{{v.brandInfo}}</p>
+        <a href="productlist.html?categoryId={{v.categoryId}}">
+          <i class="fa fa-angle-right"></i>
+          <div class="icon">{{i + 1}}</div>
+          <p class="p1">{{v.brandName}}</p>
+          <p class="p2">{{v.brandInfo}}</p>
+        </a>
+        
       </li>
     {{/each}}
   </script>

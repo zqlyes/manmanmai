@@ -223,6 +223,7 @@ i {
 }
 .main .nav {
   height: 1.01333333rem;
+  line-height: 0.98666667rem;
   border-top: 0.02666667rem solid #E8E8E8;
   border-bottom: 0.02666667rem solid #CBCBCB;
   background-image: linear-gradient(to bottom, #fff, #EDEDED);
@@ -282,6 +283,7 @@ i {
 }
 .main .rank li p {
   padding: 0.06666667rem 0;
+  color: #000;
 }
 .main .rank li .p2 {
   font-size: 0.33333333rem;

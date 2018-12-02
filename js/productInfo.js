@@ -17,17 +17,14 @@ $(function(){
       info.categoryName = categoryName;    
       
       //获取评论数
-      var str = localStorage.getItem('comment');
-      var obj = JSON.parse(str);
-
-      for (key in obj) {
-        console.log(key);
-        if(key == info.result[0].productId){
-          info.num = obj[key];
-          var htmlstr = template('proTemp',info);
-          $('.product').html(htmlstr);
-        }
-      }   
+      var comment = localStorage.getItem('comment');
+      comment = comment.replace(/\D*/g,'');
+      info.comment = comment;
+     
+      
+      var htmlstr = template('proTemp',info);
+      $('.product').html(htmlstr);
+  
     }
   })
 

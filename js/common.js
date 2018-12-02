@@ -1,7 +1,7 @@
 
 //获取ajax发送的url
 function getUrl(a){
-  var url = 'http://192.168.27.58:9090/api/' + a;
+  var url = 'http://192.168.27.48:9090/api/' + a;
   return url;
 }
 

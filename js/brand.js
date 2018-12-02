@@ -31,6 +31,13 @@ $(function(){
       var htmlstr = template('saleTemp',info);
       $('.product ul').html(htmlstr);
 
+      // 在localStorage里存储评论数
+      $('.product').on('click','a',function(){
+      var comment = $(this).find('.commit span:last-child').text();
+      console.log(comment);
+      localStorage.setItem('comment',comment);
+    })
+
 
       // 评论数据
       $.ajax({
